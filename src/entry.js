@@ -16,27 +16,33 @@ Entry.prototype.wordCount = function() {
 
 Entry.prototype.vowelCount = function() {
   var splitter = this.body.split('');
-  var counter = 0;
+  var vowelsCounter = 0;
   splitter.forEach(function(char) {
     vowels.forEach(function(vowel) {
       if(char === vowel) {
-        counter++;
+        vowelsCounter++;
       }
     });
   });
-  return counter;
+  return vowelsCounter;
 }
+
 
 Entry.prototype.consCount = function() {
-  var splitter = this.body.split();
-  var counter = 0;
-  splitter.forEach(function (char) {
-    vowels.forEach(function (vowel) {
-      if (char !== vowel) {
-        counter++;
-      }
-    });
+  var splitter = this.body.split('');
+  var consCounter = 0;
+  splitter.forEach(function(char) {
+    if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u" || char ===" ") {
+      // consCounter = 0;
+      return;
+    } else {
+      consCounter++;
+    }
   });
-  return counter;
-
+  return consCounter;
 }
+
+// Entry.prototype.returnWord(function(){
+//   var splitter = this.body.split(' ');
+//
+// })
