@@ -11,5 +11,9 @@ $(function() {
     var textEntry = new Entry(userTitle, userBody);
     var words = textEntry.wordCount();
     console.log(words);
+    var vowels = textEntry.vowelCount();
+    console.log(vowels);
+    var consonants = textEntry.consCount();
+    console.log(consonants)
   });
 });
