@@ -33,7 +33,6 @@ Entry.prototype.consCount = function() {
   var consCounter = 0;
   splitter.forEach(function(char) {
     if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u" || char ===" ") {
-      // consCounter = 0;
       return;
     } else {
       consCounter++;
@@ -42,7 +41,9 @@ Entry.prototype.consCount = function() {
   return consCounter;
 }
 
-// Entry.prototype.returnWord(function(){
-//   var splitter = this.body.split(' ');
-//
-// })
+Entry.prototype.returnWord = function(){
+  var splitter = this.body.split(' ');
+  splitter.splice(8);
+  var teaser = splitter.join(" ");
+  return teaser;
+};

@@ -15,7 +15,7 @@ $(function() {
     console.log(vowels);
     var consonants = textEntry.consCount();
     console.log(consonants)
-    // var returnWords = textEntry.returnWord();
-    // console.log(returnWords)
+    var returnWords = textEntry.returnWord();
+    console.log(returnWords)
   });
 });
